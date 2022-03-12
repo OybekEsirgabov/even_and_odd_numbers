@@ -5,9 +5,23 @@
 #Create a variable "sum_even" and assign it 0.
 
 #Find the sum of the odd digits in the variable "var_int".
-a = 4679
-b = a//1000
-c = a//100-b*10
-d = a//10-c*10-b*100
-e = a-b*1000-c*100-d*10
-print(e%2*e+d%2*d+c%2*c+b%2*b)
+var_int = 5457
+sum_even = 0
+
+x1 = var_int % 10
+var_int //= 10
+sum_even += x1*(x1%2)
+
+x2 = var_int % 10
+var_int //= 10
+sum_even += x2*(x2%2)
+
+x3 = var_int % 10
+var_int //= 10
+sum_even += x3*(x3%2)
+
+x4 = var_int % 10
+var_int //= 10
+sum_even += x4*(x4%2)
+
+print(sum_even)
